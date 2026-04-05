@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="reserve.css">
-    <title>Reservation Page</title>
+    <link rel="stylesheet" href="buy-Burger.css">
+    <title>Buy Burger</title>
 </head>
 
 <body>
@@ -26,54 +26,50 @@
 
             <li><a href="index.html" title="Go To Home">Home</a></li>
             <li><a href="menu.html" title="Go To Menu">Menu</a></li>
-            <li><a class="active" href="reserve.html">Reservation</a></li>
+            <li><a href="reserve.html" title="Go To Reservation">Reservation</a></li>
             <li><a href="contact.html" title="Go To Contact">Contact</a></li>
+
 
         </ul>
 
         <!-- star logo -->
 
         <div class="rate">
-            <a href="rate.html" title="Go To Rate"><img src="images/star-logo.png " alt="star-rate"></a>
+            <a href="rate.html" title="Go To Rate"><img src=" images/star-logo.png " alt="star-rate "></a>
         </div>
 
     </nav>
 
-    <!-- Reservation -->
+    <div class="order">
 
-    <div class="reserve">
+        <h2>Order Checkout</h2>
 
-        <h2>Reserve a Table</h2>
+        <div class="food-card ">
+            <img src="images/burger1.jfif " alt="Burger🍔">
+            <h3>Burger🍔</h3>
+        </div>
 
         <form>
 
-            <input type="text " placeholder="Your Name " required>
+            <input type="text" placeholder="Your Name " required>
 
             <input type="tel" placeholder="Phone Number" required>
 
-            <input type="date" required>
-
-            <input type="time" required>
+            <input type="text" placeholder="Your Address" required>
 
             <select>
-
-                    <option>Number of people</option>
-
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5+</option>
-
+                <option>Types of Burger</option>
+                <option>Chicken Burger 8$</option>
+                <option>Cheeseburger 10$</option>
+                <option>Bacon Burger 13$</option>               
             </select>
 
-            <button><a href="reservation.html">Book Table</a></button>
+            <button><a href="order-burger.html">Done</a></button>
 
         </form>
 
     </div>
 
-    <footer>© 2026 All Rights Reserved - Mohamed Salah</footer>
 
 </body>
 

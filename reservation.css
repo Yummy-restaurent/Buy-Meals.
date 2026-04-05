@@ -5,6 +5,37 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+
+/* Loader */
+
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 1;
+    animation: loaderFade 2s forwards;
+}
+
+.loader div {
+    width: 60px;
+    height: 60px;
+    border: 5px solid white;
+    border-top: 5px solid #38bdf8;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
 
 /* Navbar*/
 
@@ -58,76 +89,74 @@ li a.active {
 }
 
 
-/* Menu*/
+/* Reserve */
 
-.section-menu {
-    background-color: #f5f5f5;
-    padding: 55px;
-    text-align: center;
-}
-
-.section-menu h2 {
-    margin-bottom: 40px;
-    font-size: 35px;
-}
-
-.food-container {
-    display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.food-card {
-    width: 100%;
-    height: 330px;
+.reserve {
+    width: 90%;
+    max-width: 1000px;
     background-color: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 50px;
-    transition: transform 0.5s;
-}
-
-.food-card:hover {
-    transform: scale(1.1) translateY(-20px);
-}
-
-.food-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.food-card h3 {
-    font-size: 22px;
-    padding: 15px;
-}
-
-.food-card button {
-    margin-bottom: 5px;
-    padding: 9px;
+    text-align: center;
+    margin: 40px auto;
     border: none;
-    background-color: #ff6b00;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: transform 0.5s;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.food-card button a {
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+button {
+    background: #b22222;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button a {
     text-decoration: none;
     color: white;
 }
 
-.food-card button:hover {
-    background: #ff0000;
+button:hover {
+    background: #8b0000;
 }
 
 footer {
-    background-color: #333;
+    background: #333;
+    color: white;
     text-align: center;
     padding: 15px;
-    color: #ffffff;
+}
+
+
+/* Animation */
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loaderFade {
+    0%,
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 @media (max-width: 768px) {
@@ -152,5 +181,8 @@ footer {
     .rate img {
         height: 55px;
         width: 60px;
+    }
+    body {
+        overflow: scroll;
     }
 }
